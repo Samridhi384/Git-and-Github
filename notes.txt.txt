@@ -24,5 +24,6 @@ pwd = my current location where i am right now
 
  rm -rf used to delete a folder permanentaly
 
+next we can do git init , git status . git add . ,  git commit -m "initial commit"
  
 

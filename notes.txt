@@ -28,12 +28,6 @@ next we can do git init , git status . git add . ,  git commit -m "initial commi
  
 each commit should focus on one single thing
 
-suppose u forgot to add a file or made a typo 
- git commit -m 'some commit'
- git add forgotten_file
- git commit --amend
-
-so if we want to commit again after some changes and we write
 git commit and it will open to vim editor here press i to insert message and press esc & :wq q to quit and w to write and save
 
  git config --global core.editor "code --wait" to use vs code as editor  instead of cmd and here we can write long messages too
@@ -45,3 +39,10 @@ git log --oneline
 these two commands help to remove extra space from logs     
 
 we can do git commit with git kraken also
+
+suppose u forgot to add a file or made a typo 
+ git commit -m 'some commit'
+ git add forgotten_file
+ git commit --amend
+
+so if we want to commit again after some changes and we write

@@ -33,3 +33,5 @@ suppose u forgot to add a file or made a typo
  git add forgotten_file
  git commit --amend
 
+so if we want to commit again after some changes and we write
+git commit and it will open to vim editor here press i to insert message and press esc & :wq q to quit and w to write and save

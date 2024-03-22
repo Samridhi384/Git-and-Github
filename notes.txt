@@ -35,3 +35,13 @@ suppose u forgot to add a file or made a typo
 
 so if we want to commit again after some changes and we write
 git commit and it will open to vim editor here press i to insert message and press esc & :wq q to quit and w to write and save
+
+ git config --global core.editor "code --wait" to use vs code as editor  instead of cmd and here we can write long messages too
+
+ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config for refrence
+
+git log --abbrev-commit
+git log --oneline
+these two commands help to remove extra space from logs     
+
+we can do git commit with git kraken also

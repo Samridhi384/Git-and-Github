@@ -27,3 +27,9 @@ pwd = my current location where i am right now
 next we can do git init , git status . git add . ,  git commit -m "initial commit"
  
 each commit should focus on one single thing
+
+suppose u forgot to add a file or made a typo 
+ git commit -m 'some commit'
+ git add forgotten_file
+ git commit --amend
+

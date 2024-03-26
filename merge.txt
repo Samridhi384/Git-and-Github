@@ -1,0 +1,23 @@
+We merge branches, not specific commits
+We always merge to the current HEAD branch
+
+git merge oldies  to fast forward merge
+
+The content from your current HEAD (the branch you
+ are trying to merge content into) is displayed
+ between the  <<<<<<< HEAD  and  =======
+ (in the branch we are right now)
+
+
+Conflict Markers
+ The content from the branch you are trying to merge
+ from is displayed between the ======= and 
+>>>>>>> symbols.
+(from the branch we are trying to merge)
+
+git checkout -b silence  to switch and create branch
+
+Fast forward merge means to merge the branch with master without doing any changes in master
+simply means to do all the changes in the branch and then simply merge
+
+and in merge commit we first commit all the changes and then merge it  to another branch

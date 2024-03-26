@@ -1,0 +1,33 @@
+there are many times we want to see the changes in staged area and working directory 
+or what was before and what are now the changes
+
+basically it shows any changes in unstaged area
+
+A is staging area (has - sign) vs
+B is working directory (has + sign)
+
+now after just add . command
+git diff will not give anything as now staging area and working directory is same 
+
+now git diff HEAD will give differences as before it will show both whether staged or unstaged
+
+but after commit both command will return nothing
+
+
+git diff --cached
+will show only difference between Staging Area(=Index) and Head
+
+--staged : --cached 
+ and here after git diff will show nothing as nothing is present in unstaged area everything is staged
+
+ to compare two branches
+ git  diff branch1..branch2
+ and 
+ git diff branch2..branch1 here order does matter
+
+to compare two commits
+ git diff commit1..commit2
+  here we take hash id's of the commits
+
+Run a diff to compare the current HEAD to the previous commit = 
+ git diff HEAD HEAD~1

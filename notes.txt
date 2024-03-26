@@ -46,3 +46,32 @@ suppose u forgot to add a file or made a typo
  git commit --amend
 
 so if we want to commit again after some changes and we write
+
+https://www.toptal.com/developers/gitignore to add gitignore file with some useful content
+
+in gitignore file write as node_modules/ in order to ignore all files inside that folder
+
+https://git-scm.com/docs/gitignore REFER PATTERN FORMATS
+
+head -> master means the current location is of master branch 
+
+git branch = shows the list of all  branches present in your repository and  which one is currently active (master) has * mark 
+
+git branch branchname  -> creates a new branch named branchname
+git switch branchname  -> moves your head to branchname and switches you to that branch
+
+git switch -c branchname -> at a go create and switch branches
+
+git checkout branchname =  also used to switch brances and some other use cases also
+ git checkout music
+
+ git commit -a -m "new music" to add file and message pass
+
+ if we create a new file and withot commiting if we will switch branc and then it will follow you until  you commit
+
+ git branch -D emptyPlaylist  to delete the branch but you should be in some other branch
+
+  git branch -m genZMusic -> renames the current branch
+
+  
+

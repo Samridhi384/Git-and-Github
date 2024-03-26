@@ -1,0 +1,14 @@
+many times we work in other branch and suddenly we want to switch to masters branch but i am not ready to commit the changes yet in my other branch so for that we can use git stash
+
+to save = git stash save = git stash
+to remove = git stash pop
+
+git stash apply = to auto merge with other branch and have stashed changes
+
+we can use multiple git stash 
+we can get list with git stash list
+
+git stash apply stash@{2}  
+git stash drop stash@{2} to drop particular stress
+
+but in the end mostly git stash and git stash pop are used

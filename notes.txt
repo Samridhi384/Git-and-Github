@@ -75,4 +75,42 @@ git checkout branchname =  also used to switch brances and some other use cases 
 
 git checkout 7d0fa18 to switch to previous commit that is in detached head state
 
+HEAD~1 refers to the commit before HEAD (parent)
+HEAD~2 refers to 2 commits before HEAD (grandparent)
 
+git checkout HEAD~1
+
+git checkout HEAD dog.txt = to remove extra content from file and get updated from previous commit 
+or 
+ git checkout -- cat.txt dog.txt
+
+Suppose you've made some changes to a file since your
+ last commit. You've saved the file but then realize you
+ definitely do NOT want those changes anymore!
+ To restore the file to the contents in the HEAD, 
+use 
+
+git restore <file-name>
+
+git restore --source HEAD~2 dog.txt to get content of 2 commits prior
+ git restore --staged secret.txt to restore staged content into unstaged content
+
+
+git reset 60752f7
+ Suppose you've just made a couple of commits on the
+ master branch, but you actually meant to make them on
+ a separate branch instead.  To undo those commits, you
+ can use git reset.
+ git reset <commit-hash> will reset the repo back to a
+ specific commit.  The commits are gone  it will not chnage file content but will simply move to previous commit
+
+  git reset --hard b1c1db5
+used to undo the changes and come to particular commit at a time once the content is gone it can not be redo 
+
+git revert instead creates a brand new commit which
+ reverses/undos the changes from a commit. Because it
+ results in a new commit, you will be prompted to enter a
+ commit message  
+  git revert 65d103a
+
+when you r working in team then recommend to use git revert as git reset will remove the history while others still have it so might be confusion 

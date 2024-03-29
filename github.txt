@@ -1,0 +1,8 @@
+suppose we want to push content from some branch to master branch so we use
+git push origin cats:master
+
+git push origin -u master
+-u is for upstream , it means that the local and remote branches are now linked.  
+and next time we can simply write git push and it will understand 
+
+and next they have same name like in local dogs name is there so it will connect with dog branch

@@ -114,3 +114,111 @@ git revert instead creates a brand new commit which
   git revert 65d103a
 
 when you r working in team then recommend to use git revert as git reset will remove the history while others still have it so might be confusion 
+
+git pull upstream main = to pull from main owner while forking
+
+git rebase can be used to merge the branch or as cleanup tool
+
+git rebase master
+
+with rebase
+rebaseDemo (feature)
+$ git log --oneline
+e6568f8 (HEAD -> feature) more work on feature
+b8020a7 add feature
+e42430c new file
+ec79602 (master) Add login form
+1e51cb4 add footer
+add3468 Add Navbar
+99099a9 add website file
+
+without rebase 
+rebaseDemo (feature)
+$ git log --oneline
+586c4fd (HEAD -> feature) Merge branch 'master' into feature
+ec79602 (master) Add login form
+20902d2 more work on feature
+1d419ce Merge branch 'master' into feature
+1e51cb4 add footer
+e0db2c3 add feature
+0b2eb1a new file
+add3468 Add Navbar
+99099a9 add website file
+
+
+ git rebase -i HEAD~6 if we want to rename or change any commit message then we can use this here 6 is the commit number we want to change
+
+ the version release is defined as such 
+ 1.0.0
+ (main release).(minor release).(patch update)
+
+ git tag
+ git tag -l "v17*"
+ git tag -l "*beta*"
+
+ to create tag 
+ git tag tagname (lightweight tag)
+
+ git tag -a tagname (annotated tag)
+ git show tagname
+
+  git tag mytag 0cc80f9 to add tag for particular commit hash
+
+   git tag mytag cbfa6e1 -f
+this will force a tag to be added to that particular commit, even if it already exists in history.
+
+to delete tag
+ git tag -d deleteme
+
+To push tags to remote repository:
+git push origin tagname
+
+git push origin --tags (to push all tags together)
+
+git config
+git config --local user.name "Samridhi"
+git config --global user.email "sam@gmail.com"
+
+in config file 
+[color]
+	ui = true
+[color "branch"]
+	local = cyan bold
+	current = yellow
+
+Inside of refs, you'll find a heads directory refs/heads contains one file per branch in a
+repository.  Each file is named after a branch and contains the hash of the commit at the tip
+of the branch. 
+
+For example refs/heads/master contains the commit hash of the last commit on the master branch.
+
+Refs also contains a refs/tags folder which contains one file for each tag in the repo
+
+4 types of git objects = commit , tree , blob , annotated tag
+
+Git uses SHA1  cryptographic algorithm to generate hash value even for commits . They are 40 digits hexadecimal digits.
+
+ echo "he" | git hash-object --stdin
+to convert any value in hash
+
+ echo "he" | git hash-object --stdin -w to directly store the hash value in database
+
+ git cat-file -p hash value  = will give original value
+
+git cat-file -p hash value > filename = restore the contentof the file
+
+in blob(binary large object) we store the content of file and nothing else
+tree stores the list of blobs with their names as key like it stores content of directory
+commit stores the snapshot of tree and the parent commit id(s) and author name and email and commiter details etc
+
+$ git cat-file -p main^{tree} for tree
+
+git cat-file -t 59e85699 = to see the type of object
+
+git reflog show HEAD = TO SEE HEAD  IS POINTING WHERE RIGHT NOW
+
+git checkout HEAD~2 = MEANS THE COMMIT OF PARENTS 2 GENERATION AGO THAT IS GRANDPARENTS
+git checkout HEAD@{2} = two moves ago in ref log of head
+
+EVERY ENTRY IN LOG has timestamp associted with it.
+git reflog master@{one.week.ago}
